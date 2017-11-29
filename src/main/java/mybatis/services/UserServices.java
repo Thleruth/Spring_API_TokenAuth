@@ -37,7 +37,8 @@ public class UserServices {
     public User getByID(int id, boolean skipSanity) {
 
         if (skipSanity || sanityCheck(id)) {
-            return userMapper.getUserByID(id);
+            User a = userMapper.getUserByID(id);
+            return a;
         }
 
         return new User();
